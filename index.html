@@ -46,6 +46,8 @@
         .countdown-label { font-size: 0.8rem; color: var(--soft-gray); text-transform: uppercase; letter-spacing: 0.1em; margin-top: 5px; }
         .monogram { font-family: 'Cinzel', serif; font-size: 2rem; font-weight: 400; letter-spacing: 0.5em; color: var(--charcoal); text-align: center; margin-bottom: 30px; padding-left: 0.5em; }
         .monogram span { color: var(--gold); }
+        .monogram-logo { text-align: center; margin-bottom: 30px; }
+        .logo-img { max-width: 150px; height: auto; }
         .names { font-family: 'Great Vibes', cursive; font-size: 3.5rem; text-align: center; color: var(--charcoal); margin-bottom: 35px; line-height: 1.2; }
         .names .amp { font-size: 2.5rem; color: var(--gold); display: inline-block; margin: 0 10px; }
         
@@ -89,7 +91,11 @@
         .confirm-phones a:hover { text-decoration: underline; }
         
         .qr-section { text-align: center; padding: 30px; background: rgba(201, 169, 98, 0.05); border-radius: 5px; margin-top: 30px; }
-        .qr-title { font-family: 'Cinzel', serif; font-size: 0.8rem; letter-spacing: 0.15em; color: var(--gold-dark); margin-bottom: 15px; text-transform: uppercase; }
+        .qr-title { font-family: 'Cinzel', serif; font-size: 0.9rem; letter-spacing: 0.15em; color: var(--gold-dark); margin-bottom: 15px; text-transform: uppercase; }
+        .qr-instruction { display: flex; align-items: center; justify-content: center; gap: 10px; margin-bottom: 20px; flex-wrap: wrap; }
+        .qr-step { background: linear-gradient(135deg, rgba(201, 169, 98, 0.15) 0%, rgba(201, 169, 98, 0.08) 100%); padding: 10px 15px; border-radius: 20px; font-size: 0.85rem; color: var(--charcoal); }
+        .qr-arrow { color: var(--gold); font-size: 1.2rem; }
+        .qr-text-highlight { font-size: 0.95rem; color: var(--charcoal); font-weight: 500; margin-bottom: 8px; background: linear-gradient(135deg, rgba(201, 169, 98, 0.12) 0%, transparent 100%); padding: 8px 15px; border-radius: 5px; display: inline-block; }
         .qr-code { width: 150px; height: 150px; margin: 0 auto 15px; padding: 10px; background: white; border-radius: 5px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); }
         .qr-code img { width: 100%; height: 100%; }
         .qr-text { font-size: 0.85rem; color: var(--soft-gray); }
@@ -215,7 +221,7 @@
                         <div class="countdown-item"><div class="countdown-number" id="seconds">--</div><div class="countdown-label">Secunde</div></div>
                     </div>
                 </div>
-                <div class="monogram">D <span>|</span> A</div>
+                <div class="monogram-logo"><img src="sigla.jpeg" alt="Diana & Alin" class="logo-img"></div>
                 
                 <h1 class="names">Diana <span class="amp">&</span> Alin</h1>
                 
@@ -266,11 +272,11 @@
                         <div class="event-icon"><svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg></div>
                         <p class="event-title">Petrecerea</p>
                         <p class="event-name">Restaurant Acasa în Bucovina</p>
-                        <p class="event-address">Capu Câmpului 713 A</p>
+                        <p class="event-address">Capu Câmpului 713 A<br>Comuna Capu Câmpului</p>
                         <p class="event-time">Ora 19:00</p>
                         <div class="nav-buttons">
-                            <a href="https://www.google.com/maps/place/Acas%C4%83+%C3%AEn+Bucovina/@47.5765498,25.8577498,17z/" target="_blank" class="event-link"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Google Maps</a>
-                            <a href="https://waze.com/ul?ll=47.5765498,25.8577498&navigate=yes" target="_blank" class="event-link waze"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Waze</a>
+                            <a href="https://www.google.com/maps/search/?api=1&query=47.530243,25.953957" target="_blank" class="event-link"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Google Maps</a>
+                            <a href="https://waze.com/ul?ll=47.530243,25.953957&navigate=yes" target="_blank" class="event-link waze"><svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>Waze</a>
                         </div>
                     </div>
                 </div>
@@ -285,9 +291,15 @@
                 </div>
 
                 <div class="qr-section">
-                    <p class="qr-title">Sau confirmă online scanând codul</p>
+                    <p class="qr-title">Confirmă prezența online</p>
+                    <div class="qr-instruction">
+                        <span class="qr-step">📱 Scanează codul QR</span>
+                        <span class="qr-arrow">→</span>
+                        <span class="qr-step">✍️ Completează formularul</span>
+                    </div>
                     <div class="qr-code"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://secretsantaocpi.github.io/Invitatie/" alt="QR Code"></div>
-                    <p class="qr-text">Trimite link-ul și prietenilor</p>
+                    <p class="qr-text-highlight">După scanare, completează datele pentru a confirma!</p>
+                    <p class="qr-text">Poți trimite link-ul și prietenilor</p>
                 </div>
             </div>
         </div>
@@ -339,8 +351,8 @@
                             <div class="form-group" id="menu1Group">
                                 <label class="dynamic-menu-label" id="menu1Label">Preferință meniu</label>
                                 <div class="menu-options">
-                                    <div class="menu-option"><input type="radio" id="menuPui1" name="menu1" value="pui" class="menu-input" checked><label for="menuPui1" class="menu-label"><span class="menu-icon">🍗</span><span class="menu-text">Pui</span></label></div>
-                                    <div class="menu-option"><input type="radio" id="menuPeste1" name="menu1" value="peste" class="menu-input"><label for="menuPeste1" class="menu-label"><span class="menu-icon">🐟</span><span class="menu-text">Pește</span></label></div>
+                                    <div class="menu-option"><input type="radio" id="menuCarne1" name="menu1" value="carne" class="menu-input" checked><label for="menuCarne1" class="menu-label"><span class="menu-icon">🥩</span><span class="menu-text">Carne</span></label></div>
+                                    <div class="menu-option"><input type="radio" id="menuVegan1" name="menu1" value="vegan" class="menu-input"><label for="menuVegan1" class="menu-label"><span class="menu-icon">🌱</span><span class="menu-text">Vegan</span></label></div>
                                     <div class="menu-option"><input type="radio" id="menuCopil1" name="menu1" value="copil" class="menu-input"><label for="menuCopil1" class="menu-label"><span class="menu-icon">🧒</span><span class="menu-text">Meniu Copil</span></label></div>
                                 </div>
                             </div>
@@ -430,7 +442,7 @@
             document.getElementById('antispam').value = '';
             document.getElementById('attendYes').checked = true;
             document.getElementById('guests1').checked = true;
-            document.getElementById('menuPui1').checked = true;
+            document.getElementById('menuCarne1').checked = true;
             document.getElementById('formSections').style.display = 'block';
             document.getElementById('declineSection').classList.remove('show');
             document.getElementById('declineFormFields').style.display = 'none';
@@ -535,8 +547,8 @@
                 <div class="form-group">
                     <label class="dynamic-menu-label" id="menu${guestNum}Label">Preferință meniu - Persoana ${guestNum}</label>
                     <div class="menu-options">
-                        <div class="menu-option"><input type="radio" id="menuPui${guestNum}" name="menu${guestNum}" value="pui" class="menu-input" checked><label for="menuPui${guestNum}" class="menu-label"><span class="menu-icon">🍗</span><span class="menu-text">Pui</span></label></div>
-                        <div class="menu-option"><input type="radio" id="menuPeste${guestNum}" name="menu${guestNum}" value="peste" class="menu-input"><label for="menuPeste${guestNum}" class="menu-label"><span class="menu-icon">🐟</span><span class="menu-text">Pește</span></label></div>
+                        <div class="menu-option"><input type="radio" id="menuCarne${guestNum}" name="menu${guestNum}" value="carne" class="menu-input" checked><label for="menuCarne${guestNum}" class="menu-label"><span class="menu-icon">🥩</span><span class="menu-text">Carne</span></label></div>
+                        <div class="menu-option"><input type="radio" id="menuVegan${guestNum}" name="menu${guestNum}" value="vegan" class="menu-input"><label for="menuVegan${guestNum}" class="menu-label"><span class="menu-icon">🌱</span><span class="menu-text">Vegan</span></label></div>
                         <div class="menu-option"><input type="radio" id="menuCopil${guestNum}" name="menu${guestNum}" value="copil" class="menu-input"><label for="menuCopil${guestNum}" class="menu-label"><span class="menu-icon">🧒</span><span class="menu-text">Meniu Copil</span></label></div>
                     </div>
                 </div>
