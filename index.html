@@ -272,7 +272,7 @@
                         <div class="event-icon"><svg viewBox="0 0 24 24"><path d="M11 9H9V2H7v7H5V2H3v7c0 2.12 1.66 3.84 3.75 3.97V22h2.5v-9.03C11.34 12.84 13 11.12 13 9V2h-2v7zm5-3v8h2.5v8H21V2c-2.76 0-5 2.24-5 4z"/></svg></div>
                         <p class="event-title">Petrecerea</p>
                         <p class="event-name">Restaurant Acasa în Bucovina</p>
-                        <p class="event-address">Capu Câmpului 713 A<br>Comuna Capu Câmpului</p>
+                        <p class="event-address">Strada Principală, Capu Câmpului<br>Comuna Capu Câmpului, Suceava</p>
                         <p class="event-time">Ora 19:00</p>
                         <div class="nav-buttons">
                             <a href="https://www.google.com/maps/search/?api=1&query=47.530243,25.953957" target="_blank" class="event-link"><svg viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>Google Maps</a>
@@ -284,9 +284,17 @@
                 <p class="closing">Vă așteptăm cu drag!</p>
                 
                 <div class="confirm-info">
-                    <p>Vă rugăm să confirmați prezența până la data de <strong>5 Aprilie 2026</strong>,<br>la numerele de telefon:</p>
+                    <p>Vă rugăm să confirmați prezența până la data de <strong>5 Aprilie 2026</strong>,<br>la numerele de telefon sau WhatsApp:</p>
                     <p class="confirm-phones">
-                        Diana: <a href="tel:+40744780184">0744 780 184</a> &nbsp;|&nbsp; Alin: <a href="tel:+40766719656">0766 719 656</a>
+                        Diana: 
+                        <a href="tel:+40744780184">0744 780 184</a> 
+                        | 
+                        <a href="https://wa.me/40744780184?text=Bun%C4%83%2C%20sunt%20%5Bnume%5D%20%C8%99i%20vin%20la%20nunt%C4%83!" target="_blank" style="color: #25D366;">WhatsApp</a>
+                        &nbsp;|&nbsp; 
+                        Alin: 
+                        <a href="tel:+40766719656">0766 719 656</a>
+                        | 
+                        <a href="https://wa.me/40766719656?text=Bun%C4%83%2C%20sunt%20%5Bnume%5D%20%C8%99i%20vin%20la%20nunt%C4%83!" target="_blank" style="color: #25D366;">WhatsApp</a>
                     </p>
                 </div>
 
@@ -294,12 +302,18 @@
                     <p class="qr-title">Confirmă prezența online</p>
                     <div class="qr-instruction">
                         <span class="qr-step">📱 Scanează codul QR</span>
-                        <span class="qr-arrow">→</span>
+                        <span class="qr-arrow">↓</span>
+                        <span class="qr-step">👇 Derulează în jos</span>
+                        <span class="qr-arrow">↓</span>
                         <span class="qr-step">✍️ Completează formularul</span>
                     </div>
-                    <div class="qr-code"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://secretsantaocpi.github.io/Invitatie/" alt="QR Code"></div>
-                    <p class="qr-text-highlight">După scanare, completează datele pentru a confirma!</p>
+                    <div class="qr-code"><img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://alexandruchiriac87.github.io/Invitatie/" alt="QR Code"></div>
+                    <p class="qr-text-highlight">După scanare, <strong>derulează în jos</strong> pentru a completa formularul de confirmare!</p>
                     <p class="qr-text">Poți trimite link-ul și prietenilor</p>
+                    <a href="#rsvpForm" class="calendar-btn" style="margin-top: 15px;">
+                        <svg viewBox="0 0 24 24"><path d="M12 4l-1.41 1.41L16.17 11H4v2h12.17l-5.58 5.59L12 20l8-8z"/></svg>
+                        Mergi direct la formular
+                    </a>
                 </div>
             </div>
         </div>
@@ -385,7 +399,17 @@
                     </form>
                     <div class="contact-info">
                         <p class="contact-label">Pentru orice întrebări, ne puteți contacta:</p>
-                        <p class="contact-phone">Diana: <a href="tel:+40744780184">0744 780 184</a><br>Alin: <a href="tel:+40766719656">0766 719 656</a></p>
+                        <p class="contact-phone">
+                            Diana: 
+                            <a href="tel:+40744780184">0744 780 184</a>
+                            <span style="color: var(--soft-gray); margin: 0 5px;">|</span>
+                            <a href="https://wa.me/40744780184" target="_blank" style="color: #25D366;">WhatsApp</a>
+                            <br>
+                            Alin: 
+                            <a href="tel:+40766719656">0766 719 656</a>
+                            <span style="color: var(--soft-gray); margin: 0 5px;">|</span>
+                            <a href="https://wa.me/40766719656" target="_blank" style="color: #25D366;">WhatsApp</a>
+                        </p>
                     </div>
                 </div>
                 <div id="successMessage" class="success-message">
@@ -480,6 +504,20 @@
             const details = encodeURIComponent('Cununia religioasă la Biserica Sf. Varvara (ora 16:00), urmată de petrecere la Restaurant Acasa în Bucovina (ora 19:00)');
             const location = encodeURIComponent('Gura Humorului, Suceava, România');
             window.open(`https://calendar.google.com/calendar/render?action=TEMPLATE&text=${title}&dates=20260502T130000Z/20260503T000000Z&details=${details}&location=${location}`, '_blank');
+        });
+
+        // Funcție pentru scroll automat la formular
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href');
+                if (targetId === '#rsvpForm') {
+                    document.querySelector(targetId).scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'center'
+                    });
+                }
+            });
         });
 
         let isAttending = true;
