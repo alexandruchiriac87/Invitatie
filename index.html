@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Diana & Alin - 2 Mai 2026</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Cinzel:wght@400;500;600&family=Great+Vibes&display=swap" rel="stylesheet">
+    <link href="https://fonts.cdnfonts.com/css/aphrodite-slim-pro" rel="stylesheet">
     <style>
         * { margin: 0; padding: 0; box-sizing: border-box; }
         :root {
@@ -48,8 +49,31 @@
         .monogram span { color: var(--gold); }
         .monogram-logo { text-align: center; margin-bottom: 30px; }
         .logo-img { max-width: 150px; height: auto; }
-        .names { font-family: 'Great Vibes', cursive; font-size: 3.5rem; text-align: center; color: var(--charcoal); margin-bottom: 35px; line-height: 1.2; }
-        .names .amp { font-size: 2.5rem; color: var(--gold); display: inline-block; margin: 0 10px; }
+        .names { 
+            font-family: 'Aphrodite Slim Pro', cursive;
+            font-size: 3rem; 
+            text-align: center; 
+            color: var(--charcoal); 
+            margin-bottom: 35px; 
+            line-height: 1.2;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .name-diana {
+            font-family: 'Aphrodite Slim Pro', cursive;
+        }
+        .name-alin {
+            font-family: 'Aphrodite Slim Pro', cursive;
+        }
+        .names .amp { 
+            font-family: 'Great Vibes', cursive;
+            font-size: 2.8rem; 
+            color: var(--gold); 
+            display: inline-block; 
+            margin: 0 10px; 
+        }
         
         /* Nasi section */
         .nasi-section { text-align: center; margin-bottom: 25px; }
@@ -174,7 +198,8 @@
         @media (max-width: 600px) {
             .invitation-container { padding: 15px; }
             .card-inner { padding: 40px 25px; }
-            .names { font-size: 2.5rem; }
+            .names { font-size: 2.2rem; }
+            .names .amp { font-size: 2rem; }
             .date { font-size: 1.5rem; }
             .events { gap: 30px; }
             .event { min-width: 100%; }
@@ -223,7 +248,11 @@
                 </div>
                 <div class="monogram-logo"><img src="sigla.jpeg" alt="Diana & Alin" class="logo-img"></div>
                 
-                <h1 class="names">Diana <span class="amp">&</span> Alin</h1>
+                <h1 class="names">
+                    <span class="name-diana">Diana</span>
+                    <span class="amp">&</span>
+                    <span class="name-alin">Alin</span>
+                </h1>
                 
                 <div class="nasi-section">
                     <p class="nasi-intro">alături de nașii,</p>
@@ -366,7 +395,7 @@
                                 <label class="dynamic-menu-label" id="menu1Label">Preferință meniu</label>
                                 <div class="menu-options">
                                     <div class="menu-option"><input type="radio" id="menuCarne1" name="menu1" value="carne" class="menu-input" checked><label for="menuCarne1" class="menu-label"><span class="menu-icon">🥩</span><span class="menu-text">Carne</span></label></div>
-                                    <div class="menu-option"><input type="radio" id="menuVegan1" name="menu1" value="vegan" class="menu-input"><label for="menuVegan1" class="menu-label"><span class="menu-icon">🌱</span><span class="menu-text">Vegan</span></label></div>
+                                    <div class="menu-option"><input type="radio" id="menuVegetarian1" name="menu1" value="vegetarian" class="menu-input"><label for="menuVegetarian1" class="menu-label"><span class="menu-icon">🌱</span><span class="menu-text">Vegetarian</span></label></div>
                                     <div class="menu-option"><input type="radio" id="menuCopil1" name="menu1" value="copil" class="menu-input"><label for="menuCopil1" class="menu-label"><span class="menu-icon">🧒</span><span class="menu-text">Meniu Copil</span></label></div>
                                 </div>
                             </div>
@@ -482,7 +511,12 @@
             if (event.persisted) window.location.reload();
         });
 
-        const weddingDate = new Date('May 2, 2026 16:00:00').getTime();
+        // Wedding date: May 2, 2026 at 16:00 Romania time
+        // In May 2026, Romania will be in EEST (Eastern European Summer Time = UTC+3)
+        // We create the date in UTC and then add the Romania offset
+        const weddingDateUTC = Date.UTC(2026, 4, 2, 13, 0, 0); // 13:00 UTC = 16:00 EEST (UTC+3)
+        const weddingDate = weddingDateUTC;
+        
         function updateCountdown() {
             const now = new Date().getTime();
             const distance = weddingDate - now;
@@ -586,7 +620,7 @@
                     <label class="dynamic-menu-label" id="menu${guestNum}Label">Preferință meniu - Persoana ${guestNum}</label>
                     <div class="menu-options">
                         <div class="menu-option"><input type="radio" id="menuCarne${guestNum}" name="menu${guestNum}" value="carne" class="menu-input" checked><label for="menuCarne${guestNum}" class="menu-label"><span class="menu-icon">🥩</span><span class="menu-text">Carne</span></label></div>
-                        <div class="menu-option"><input type="radio" id="menuVegan${guestNum}" name="menu${guestNum}" value="vegan" class="menu-input"><label for="menuVegan${guestNum}" class="menu-label"><span class="menu-icon">🌱</span><span class="menu-text">Vegan</span></label></div>
+                        <div class="menu-option"><input type="radio" id="menuVegetarian${guestNum}" name="menu${guestNum}" value="vegetarian" class="menu-input"><label for="menuVegetarian${guestNum}" class="menu-label"><span class="menu-icon">🌱</span><span class="menu-text">Vegetarian</span></label></div>
                         <div class="menu-option"><input type="radio" id="menuCopil${guestNum}" name="menu${guestNum}" value="copil" class="menu-input"><label for="menuCopil${guestNum}" class="menu-label"><span class="menu-icon">🧒</span><span class="menu-text">Meniu Copil</span></label></div>
                     </div>
                 </div>
